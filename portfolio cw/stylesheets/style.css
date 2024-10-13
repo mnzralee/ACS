@@ -89,12 +89,14 @@ header{
 }
 
 section{
-    padding: 0rem 12vw;
-    height: 100vh;
+    margin: 0rem 12vw;
     overflow: hidden;
 }
 
-
+a{
+    text-decoration: none;
+    color: inherit;
+}
 
 
 /* HOME SECTION */
@@ -106,11 +108,13 @@ section{
     display: flex;
     align-items: center;
     padding-top: 30px;
+    height: 100vh;
+    overflow: visible;
 }
 
 .text-zone h1 {
-    font-size: max(5rem, 7vw);
-    line-height: max(4.3rem, 6vw);
+    font-size: max(6rem, 8vw);
+    line-height: max(5.3rem, 6.3vw);
     letter-spacing: -3px;
     position: relative;
     cursor: default;
@@ -264,7 +268,9 @@ margin: 10px;
 }
 
 .section-header{
-    font-size: 2rem;
+    font-size: max(3rem, 4vw);
+    letter-spacing: -3px;
+    font-weight: 700;
     color: #08fdd8;
     margin-bottom: 30px;
 }
@@ -285,11 +291,14 @@ margin: 10px;
     font-weight: 700;
     position: absolute;
     color: rgb(45, 45, 46);
+    z-index: -999;
+}
+
+.fake-work{
     left: -0vw;
     top: -0rem;
     transform: translate(-20%, -20%);
     letter-spacing: -10px;
-    z-index: -999;
 }
 
 
@@ -357,3 +366,184 @@ margin: 10px;
     transform: scale(0.6);
     opacity: 1;
   }
+
+
+  /* BLOG SECTION */
+
+  .blog-section{
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    height: fit-content;
+  }
+
+  .blog-container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 3rem;
+    position: relative;
+  }
+
+  .blog{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  .blog-line{
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 2px;
+    height: 20px;
+    margin: 30px;
+    margin-left: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+
+  .blog h2{
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+
+  .blog time{
+    font-size: 14px;
+    font-weight: 300;
+    opacity: 0.7;
+  }
+
+  .blog:hover{
+    transform: translateX(10px);
+  }
+
+  .blog:hover .blog-line{
+    transform: rotate(90deg);
+  }
+
+
+
+/* ABOUT SECTION */
+
+/* .about-section{
+    min-height: 100vh;
+} */
+
+.about-container{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 30px;
+}
+
+.about-content{
+    width: 50%;
+}
+
+.socials-container{
+    margin-top: 18%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+}
+
+.social-icon{
+    display: none;
+}
+
+.socials-container li{
+    list-style-type: none;
+    padding: 6px 20px;
+    margin: 30px;
+    color: #909096;
+    border: 2px solid #909096;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    height: 42px;
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.socials-container li::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0px;
+    left: -10px;
+    transform: skewX(-20deg);
+    transition: all 0.3s ease;
+    z-index: 11;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.15);    
+
+}
+
+.socials-container li:hover::after{
+    width: calc(100% + 20px);
+}
+
+.socials-container li:hover{
+    color: #08fdd8;
+    justify-content: center;
+}
+
+.socials-container li:hover span{
+    display: none;
+}
+.socials-container li:hover .social-icon{
+    display: block;
+    transform: scale(1.3) translateX(0%);
+}
+
+.fake-social{
+    bottom: -50%;
+    right: -5%;
+    opacity: 0.2;
+}
+
+
+/* Subscribe Form Section */
+
+.subscribe-section{
+    position: relative;
+    margin-top: 9rem;
+    margin-bottom: 6rem;
+}
+
+.subform-container{
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid #909096;
+    border-radius: 50px;
+    backdrop-filter: blur(20px);
+    padding: 25px 40px;
+}
+
+.fake-subscribe{
+    bottom: 53%;
+    right: 52%;
+    transform: translate(50%,50%) scaleY(2);
+    font-size: 14rem;
+    letter-spacing: -3rem;
+}
+
+.subform-container div:nth-child(2){
+    height: 100%;
+    width: 60%;
+}
+
+.subform-container h2{
+    height: 100%;
+    margin: 0;
+}
