@@ -523,11 +523,12 @@ margin: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.2);
     border: 2px solid #909096;
     border-radius: 50px;
     backdrop-filter: blur(20px);
-    padding: 25px 40px;
+    padding: 30px 70px;
+    gap: 5%;
 }
 
 .fake-subscribe{
@@ -535,15 +536,64 @@ margin: 10px;
     right: 52%;
     transform: translate(50%,50%) scaleY(2);
     font-size: 14rem;
-    letter-spacing: -3rem;
+    letter-spacing: -4rem;
 }
 
 .subform-container div:nth-child(2){
     height: 100%;
-    width: 60%;
+    width: 55%;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column-reverse;
+    gap: 30px;
 }
 
 .subform-container h2{
     height: 100%;
     margin: 0;
+}
+
+
+.subform-container input[type='email']{
+    background-color: #00000020;
+    padding: 10px 15px;
+    width: 300px;
+    border-radius: 15px;
+    border: 2px solid #909096;
+    font-family: inherit;
+    font-size: 16px;
+    color: #909096;
+    transition: all 0.1s ease;
+
+}
+
+.subform-container input[type='email']:focus{
+    background-color: #000;
+    border: 2px solid #909096 !important;
+    box-shadow: none;
+    outline: none;
+}
+
+.subform-container input[type='submit']{
+    background-color: #08fdd8;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-family: inherit;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.subform-container input[type='submit']:hover{
+    opacity: 0.9;
+}
+
+
+
+@media (prefers-color-scheme: light) {
+    body{
+        background-color: wheat;
+    }
 }
