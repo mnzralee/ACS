@@ -10,7 +10,6 @@
 
 body{
     font-family: "Poppins", sans-serif;
-    background-color: rgb(29, 29, 29);
     background-color: #1d1d1d;
     color: #fff;
     scroll-behavior: smooth;
@@ -593,9 +592,11 @@ margin: 10px;
 
 
 
-@media (prefers-color-scheme: light) {
-    body{
-        background-color: wheat;
+@media (max-width: 990px) {
+    header{
+        height: 12vh;
+    }
+    .nav-text{
         display: none;
     }
 
