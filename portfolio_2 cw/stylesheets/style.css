@@ -96,7 +96,7 @@ nav{
     z-index: 90;
 }
 
-/* Style only direct children of the unordered list */
+/* Style only direct children of the unordered list (User action pseudo class)*/
 .navlink > i{
     width: 20px;
     height: 20px;
@@ -105,14 +105,14 @@ nav{
     align-items: center;
 }
 
-/* Changing button background on hover (user action) */
-/* Negation pseudo-class, to not apply hover effect on active navlink*/
+/* Changing button background on hover (User action pseudo class) */
+/* (Negation pseudo class), to not apply hover effect on active navlink*/
 .navlink:not(.active):hover::after {
     width: calc(100% + 20px);
 }
 
 
-/* Changing button color on hover (user action) */
+/* Changing button color on hover (User action pseudo class) */
 
 .navlink:hover{
     border: 1px solid rgba(45, 45, 46, 0.5);
@@ -152,11 +152,12 @@ section{
     cursor: default;
 }
 
+/* Text-Effect, adds a colored shadow to the text */
 .text-zone h1 span{
-    text-shadow: 2px 2px 2px #08fdd8a5; /* Text-Effect, adds a colored shadow to the text */
+    text-shadow: 2px 2px 2px #08fdd8a5; 
 }
 
-/* Using ::before pseudo-element to add content before heading */
+/* Using ::before Pseudo elements with generated content */
 .text-zone h1::before {
     content: '<h1>';
     position: absolute;
@@ -168,7 +169,7 @@ section{
     letter-spacing: 3px;
 }
 
-/* Using ::after pseudo-element to add content after heading */
+/* Using ::after Pseudo elements with generated content */
 .text-zone h1::after {
     content: '</h1>';
     position: absolute;
@@ -180,10 +181,11 @@ section{
     letter-spacing: 3px;
 }
 
-.text-zone .gray-text {
-    margin-top: 30px;
+.gray-text {
+    margin-top: -5px;
     color: #a2a2a3;
     letter-spacing: 3px;
+    line-height: 1rem;
     font-size: 0.8rem;
     cursor: default;
 }
@@ -279,6 +281,7 @@ section{
 .work-section{
     height: fit-content;
     margin: 2rem 0;
+    overflow: visible;
 }
 
 .section-header{
@@ -286,7 +289,7 @@ section{
     letter-spacing: -3px;
     font-weight: 700;
     color: #08fdd8;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .section-text-zone{
@@ -322,6 +325,7 @@ section{
     width: fit-content;
     max-width: 100%;
     backdrop-filter: blur(20px);
+
 }
 
 .projects-wall ul {
@@ -593,7 +597,7 @@ section{
     gap: 10px;
 }
 
-/* Styling email input field based on its type */
+/* Styling email input field based on its type - Attribute selectors*/
 .subform-container input[type='email']{
     background-color: #00000020;
     padding: 10px 20px;
@@ -607,14 +611,14 @@ section{
     transition: all 0.1s ease;
 }
 
-/* Styling email input field based on its type */
+/* Styling email input field based on its type - Attribute selectors*/
 .subform-container input[type='email']:focus{
     background-color: #000;
     box-shadow: none;
     outline: none;
 }
 
-/* Styling submit button based on its type */
+/* Styling submit button based on its type - Attribute selectors*/
 .subform-container input[type='submit']{
     background-color: #08fdd8;
     padding: 10px 20px;
@@ -628,7 +632,7 @@ section{
     transition: all 0.1s ease;
 }
 
-/* Styling submit button based on its type */
+/* Styling submit button based on its type - Attribute selectors*/
 .subform-container input[type='submit']:hover{
     opacity: 0.9;
 }
@@ -651,8 +655,39 @@ footer{
 /* ABOUT PAGE STYLES */
 /* ABOUT PAGE STYLES */
 
+#about .about-section .about_heading{
+    color: white !important;
+    margin-bottom: 10px;
+}
+
+#about .about-section h2:not(.about_heading){
+    font-size: 2.5rem;
+    letter-spacing: -2px;
+}
+
+#about a{
+    color: #909096;
+}
+#about a:hover{
+    color: #08fdd8;
+}
+
+#about .about-section{
+    height: fit-content;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
 
 
+.skills-container ul{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 30px;
+    line-height: 1px;
+    margin: 2rem 1rem;
+}
 
 
 
@@ -667,7 +702,7 @@ footer{
 
     nav{
         justify-content: space-between;
-        min-width: 400px;
+        min-width: 350px;
         max-width: none;
     }
 
