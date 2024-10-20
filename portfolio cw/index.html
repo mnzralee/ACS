@@ -7,40 +7,34 @@
     <link rel="stylesheet" href="./stylesheets/style.css">
     <title>MNZR's Portfolio</title>
 </head>
-<body>
+<body id="main">
     <header>
         <nav>
             <ul class="navlinks">
+              <a href="">
                 <li class="navlink active">
-                    <a href="#">
-                            <i class="fa-solid fa-house fa-lg"></i>
-                            <p class="nav-text">Home</p>
-                    </a>
+                    <i class="fa-solid fa-house fa-lg"></i>
+                    <p class="nav-text">Home</p>
                 </li>
+              </a>
+              <a href="./about.html">
                 <li class="navlink">
-                    <a href="#">
-                            <i class="fa-regular fa-circle-user fa-lg"></i>
-                            <p class="nav-text">About</p>
-                    </a>
+                    <i class="fa-regular fa-circle-user fa-lg"></i>
+                    <p class="nav-text">About</p>
                 </li>
+              </a>
+              <a href="./blog.html">
+                    <li class="navlink">
+                    <i class="fa-solid fa-book-bookmark fa-lg"></i>
+                    <p class="nav-text">Blog</p>
+                </li>
+              </a>
+              <a href="#">
                 <li class="navlink ">
-                    <a href="#">
-                            <i class="fa-solid fa-border-all fa-lg"></i>
-                            <p class="nav-text">Work</p>
-                    </a>
+                    <i class="fa-solid fa-message"></i>
+                    <p class="nav-text">Let's Talk</p>
                 </li>
-                <li class="navlink">
-                    <a href="#">
-                            <i class="fa-solid fa-book-bookmark fa-lg"></i>
-                            <p class="nav-text">Blog</p>
-                    </a>
-                </li>
-                <li class="navlink ">
-                    <a href="#">
-                            <i class="fa-solid fa-image fa-lg"></i>
-                            <p class="nav-text">Gallery</p>
-                    </a>
-                </li>
+              </a>
             </ul>
         </nav>
     </header>
@@ -59,13 +53,14 @@
               web developer
             </span>
           </h1>
+          <br>
           <p class="gray-text">Web / Application Developer</p>
           
           <br />
   
           <!-- contact button -->
            <div class="contact-button-container">
-            <a href="#section-contact" class="contact-button">
+            <a href="./about.html" class="contact-button">
                 <div>
                     About me!
                 </div>
@@ -97,52 +92,50 @@
             </p>
             
         </div>
-        <div class="projects-wall-container">
-            <div class="projects-wall">
-                <ul>
-                    <li>
-                      <div class="wall-item lazyload" id="modal1">
-                        <img src="./images/ImanAcademy.png" alt="Manazir Ali" />
-                        <a href="#" class="colorbox">VIEW <br> PROJECT</a>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="wall-item lazyload">
-                        <img src="./images/neo.png" alt="Manazir Ali" />
-                        <a href="#" class="colorbox">VIEW <br> PROJECT</a>
-                      </div>
-                    </li>
-                    
-                    <!-- magic wall 1 -->
-                    <li>
-                      <div class="wall-item lazyload" id="modal2">
-                        <img src="./images/Goodness-X.png" alt="Manazir Ali" />
-                        <a href="#" class="colorbox">VIEW <br> PROJECT</a>
-                      </div>
-                    </li>
-                    <!-- magic wall 3 -->
-                    <li>
-                      <div class="wall-item lazyload">
-                        <img src="./images/ticket-agency.png" alt="Manazir Ali" />
-                        <a href="#" class="colorbox">VIEW <br> PROJECT</a>
-                      </div>
-                    </li>
-                    <!-- magic wall 3 -->
-                    <li>
-                      <div class="wall-item lazyload">
-                        <img src="./images/expense.png" alt="Manazir Ali" />
-                        <a href="#" class="colorbox">VIEW <br> PROJECT</a>
-                      </div>
-                    </li>
-                    <!-- magic wall 4 -->
-                    <li>
-                      <div class="wall-item lazyload">
-                        <img src="./images/zero-hunger.png" alt="Manazir Ali" />
-                        <a href="#" class="colorbox">VIEW <br> PROJECT</a>
-                      </div>
-                    </li>
-                </ul>
-            </div>
+        <div class="projects-wall">
+          <ul>
+            <li>
+              <div class="project-wall_item" id="modal1">
+                  <img src="./images/ImanAcademy.png" alt="Manazir Ali" />
+                  <a href="#" class="colorbox">VIEW <br> PROJECT</a>
+                </div>
+              </li>
+              <li>
+                <div class="wall-item lazyload">
+                  <img src="./images/neo.png" alt="Manazir Ali" />
+                  <a href="#" class="colorbox">VIEW <br> PROJECT</a>
+                </div>
+              </li>
+              
+              <!-- magic wall 1 -->
+              <li>
+                <div class="wall-item lazyload" id="modal2">
+                  <img src="./images/Goodness-X.png" alt="Manazir Ali" />
+                  <a href="#" class="colorbox">VIEW <br> PROJECT</a>
+                </div>
+              </li>
+              <!-- magic wall 3 -->
+              <li>
+                <div class="wall-item lazyload">
+                  <img src="./images/ticket-agency.png" alt="Manazir Ali" />
+                  <a href="#" class="colorbox">VIEW <br> PROJECT</a>
+                </div>
+              </li>
+              <!-- magic wall 3 -->
+              <li>
+                <div class="wall-item lazyload">
+                  <img src="./images/expense.png" alt="Manazir Ali" />
+                  <a href="#" class="colorbox">VIEW <br> PROJECT</a>
+                </div>
+              </li>
+              <!-- magic wall 4 -->
+              <li>
+                <div class="wall-item lazyload">
+                  <img src="./images/zero-hunger.png" alt="Manazir Ali" />
+                  <a href="#" class="colorbox">VIEW <br> PROJECT</a>
+                </div>
+              </li>
+          </ul> 
         </div>
     </section>
 
@@ -227,5 +220,10 @@
 
     </section>
 
+    <footer>
+      <div>
+        <p>© 2024 / Manazir Ali / W2051634 / L5 Advanced Client-Side Coursework</p>
+      </div>
+    </footer>
 </body>
 </html>
