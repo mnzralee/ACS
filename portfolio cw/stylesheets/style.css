@@ -278,11 +278,37 @@ section{
 
 
 
+.section-header{
+    font-size: 2.5rem;
+    letter-spacing: -3px;
+    font-weight: 700;
+    color: #08fdd8;
+    margin-bottom: 30px;
+}
+
+.section-text{
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+
+
+.fake-text{
+    font-size: 35rem;
+    font-weight: 700;
+    position: absolute;
+    color: rgb(45, 45, 46);
+    z-index: -999;
+}
+
+
+
 /* BLOG SECTION */
 
-.blog-section{
-    margin-top: 8rem;
-    margin-bottom: 8rem;
+.blog-section, .contact-section{
+    margin-top: 7rem;
+    margin-bottom: 7rem;
     height: fit-content;
 }
 
@@ -313,12 +339,12 @@ section{
     transition: all 0.2s ease-in-out;
 }
 
-.blog h2{
-    font-size: 1.2rem;    
-    font-weight: 600;   
+.blog h2, #blog h3{
+    font-size: 1.1rem;    
+    font-weight: 600;  
 }
 
-.blog time{
+.blog time, #blog time{
     font-size: 0.8rem;
     font-weight: 300;
     opacity: 0.7;
@@ -489,7 +515,7 @@ section{
 }
 
 /* Styling email input field based on its type - Attribute selectors*/
-.subform-container input[type='email']{
+.subform-container input[type='email'], .subform-container input[type='name'], .subform-container textarea{
     background-color: #00000020;
     padding: 10px 20px;
     height: 45px;
@@ -500,7 +526,19 @@ section{
     font-size: 0.8rem;
     color: #909096;
     transition: all 0.1s ease;
+    margin: 10px;
 }
+
+#contact .subscribe-section:nth-child(3){
+    margin-top: 3rem;
+}
+
+#contact .subform-container textarea{
+    height: 100px;
+    margin: 10px;
+    width: min(525px, 100%);
+}
+
 
 /* Styling email input field based on its type - Attribute selectors*/
 .subform-container input[type='email']:focus{
@@ -580,12 +618,50 @@ footer{
     margin: 2rem 1rem;
 }
 
+/* BLOG PAGE */
 
+
+#blog .blog-section > div{
+    border-top: 1px solid #909096;
+    border-bottom: 1px solid #909096;
+    padding: 4rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#blog .section-text{
+    text-align: justify;
+}
+
+#blog .section-text > span{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.socials-container-2 ul{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.socials-container-2 ul > li{
+    list-style-type: none;
+    color: #909096;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+
+.socials-container-2 ul > li:hover{
+    color: #08fdd8;
+
+}
 
 /* Media Query For Desktop screen width greater than 1000px */
 @media (min-width: 1000px) {
     :root{
-        font-size: 18px;
+        font-size: 20px;
     }
     .nav-text{
         display: block;
@@ -633,7 +709,7 @@ footer{
         margin-bottom: 30px;
     }
 
-    .section-text-zone{
+    .section-text{
         width: min(70%, 900px);
         margin-bottom: 60px;
     }
@@ -709,10 +785,15 @@ footer{
         width: 300px;
     }
 
+    
+    #contact .subform-container textarea{
+        width: min(575px, 100%);
+    }
+
     footer{
         margin: 1rem 7rem;
         font-size: 0.6rem;
     }
     
-
+    
 }
