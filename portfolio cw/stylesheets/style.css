@@ -739,7 +739,7 @@ footer{
 }
 
 
-/* Media Query For Desktop screen width greater than 1024p
+/* Media Query For Desktop screen width greater than 102
 @media screen and (min-width: 1024px) {
     :root{
         font-size: 20px;
