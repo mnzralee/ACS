@@ -45,6 +45,7 @@ header{
     display: none;
 }
 
+/* nav element */
 nav{
     max-width: 300px;
     background-color: rgba(0, 0, 0, 0.6); /* semi-transparent */
@@ -54,12 +55,14 @@ nav{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Creates a soft shadow effect */
 }
 
+/* unordered list */
 .navlinks{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* list items */
 .navlink{
     list-style-type: none;
     padding: 4px 12px;
@@ -69,12 +72,14 @@ nav{
     position: relative;
     overflow: hidden;}
 
+/* Active navlink, or current page */
 .navlinks .active{
     background-color: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(45, 45, 46, 0.5);
     color: #08fdd8;
 }
 
+/* Styling the anchor tags inside the list items */
 .navlinks a{
     text-decoration: none;
     color: inherit;
@@ -83,7 +88,7 @@ nav{
     color: #909096;
 }
 
-
+/* this after psuedo adds a skewed background effect that expands on hover */
 .navlink::after{
     content: '';
     position: absolute;
@@ -98,11 +103,12 @@ nav{
     background-color: rgba(255, 255, 255, 0.15);    
 }
 
+/* Styling all the anchor tags inside the list items */
 .navlink * {
     z-index: 90;
 }
 
-/* Style only direct children of the unordered list (User action pseudo class)*/
+/* Style only direct children of the unordered list with User action pseudo class*/
 .navlink > i{
     width: 20px;
     height: 20px;
@@ -111,20 +117,20 @@ nav{
     align-items: center;
 }
 
-/* Changing button background on hover (User action pseudo class) */
-/* (Negation pseudo class), to not apply hover effect on active navlink*/
+/* Hover state to expand the after pseudo-element */
+/* Negation pseudo class to not apply hover effect on active navlink*/
 .navlink:not(.active):hover::after {
     width: calc(100% + 20px);
 }
 
 
 /* Changing button color on hover (User action pseudo class) */
-
 .navlink:hover{
     border: 1px solid rgba(45, 45, 46, 0.5);
     color: #08fdd8;
 }
 
+/* Active navlink, or current page */
 .navlinks .active{
     background-color: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(45, 45, 46, 0.5);
@@ -132,14 +138,16 @@ nav{
 
 }
 
-
+/* general style for all sections */
 section{
     margin: 0 2rem;
     overflow: hidden;
 }
 
 
-/* Main page Home Section Styles */
+/* Main page Home Section Styles, index.html*/
+/* Main page Home Section Styles, index.html*/
+
 
 #section-home{
     height: 100vh;
@@ -187,6 +195,7 @@ section{
     letter-spacing: 3px;
 }
 
+/* Background Grayed out text */
 .gray-text {
     margin-top: -5px;
     color: #a2a2a3;
@@ -196,7 +205,7 @@ section{
     cursor: default;
 }
 
-
+/* scroll down text animation */
 .scroll-down {
     position: absolute;
     right: -30px;
@@ -222,6 +231,7 @@ section{
     animation: scroll 0.5s linear infinite alternate-reverse;
 }
 
+/* animation to move the scroll up and down, X axis since its rotated 90deg */
 @keyframes scroll {
     0% {
         transform: translateX(-7px);
@@ -231,6 +241,7 @@ section{
     }
 }
 
+/* scroll down icon */
 .scroll-down .fas {
     transform: rotate(270deg);
     margin: 10px;
