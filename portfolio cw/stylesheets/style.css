@@ -447,7 +447,6 @@ section{
     z-index: 11;
     transition: all 0.3s ease;
     background-color: rgba(255, 255, 255, 0.15);    
-
 }
 
 .socials-container li:hover::after{
@@ -505,6 +504,7 @@ section{
     letter-spacing: -4rem;
 }
 
+/* Styling the second div element inside the subform-container */
 .subform-container div:nth-child(2){
     display: flex;
     align-items: left;
@@ -640,8 +640,10 @@ footer{
     margin: 2rem 1rem;
 }
 
-/* BLOG PAGE */
 
+/* BLOG PAGE */
+/* BLOG PAGE */
+/* BLOG PAGE */
 
 #blog .blog-section > article{
     border-top: 1px solid #909096;
@@ -684,6 +686,10 @@ footer{
     background-color: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0.5) 100%) I !important;
 
 }
+
+/* Media Queries */
+/* Media Queries */
+/* Media Queries */
 
 /* Tablet screens, generally between 600px and 1024px */
 @media (min-width: 600px) and (max-width: 1024px) {
