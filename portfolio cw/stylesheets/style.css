@@ -98,16 +98,16 @@ nav{
     height: 100%;
     top: 0px;
     left: -10px;
-    transform: skewX(-20deg);
+    transform: skewX(-20deg); /* Skews the background */
     transition: all 0.3s ease;
     z-index: 11;
     transition: all 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.15);    
+    background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent white */ 
 }
 
 /* Styling all the anchor tags inside the list items */
 .navlink * {
-    z-index: 90;
+    z-index: 90; /* Z-index to keep the text on top */
 }
 
 /* i elements that are children of the list */
