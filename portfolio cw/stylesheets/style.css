@@ -16,7 +16,8 @@
 /* Set font, bg-color, and the rest for entire body to have a consistent look */
 body{
     font-family: "Poppins", sans-serif; /* Applying Google Fonts */
-    background-color: #1d1d1d;
+    /* background-color: #1d1d1d; */
+    background: radial-gradient(ellipse at top, #1d1d1d 0%, #1d1d1d 100%); /* Radial gradient background */
     color: #fff;
     width: 100%;
 }
@@ -36,7 +37,7 @@ header{
     justify-content: center;
     position: fixed;
     z-index: 10;
-    overflow: hidden;
+    overflow: hidden; /* Hides the overflow */
     top:0;
 }
 
@@ -108,7 +109,7 @@ nav{
     z-index: 90;
 }
 
-/* Style only direct children of the unordered list with User action pseudo class*/
+/* i elements that are children of the list */
 .navlink > i{
     width: 20px;
     height: 20px;
@@ -530,7 +531,7 @@ section{
     gap: 10px;
 }
 
-/* Styling email input field based on its type - Attribute selectors*/
+/* Styling email input field based on its type with Attribute selectors*/
 .subform-container input[type='email'], .subform-container input[type='name'], .subform-container textarea{
     background-color: #00000020;
     padding: 10px 20px;
@@ -545,6 +546,8 @@ section{
     margin: 10px;
 }
 
+
+/* Styling a specific section of the page using nth psuedo class*/
 #contact .subscribe-section:nth-child(3){
     margin-top: 3rem;
 }
@@ -556,14 +559,19 @@ section{
 }
 
 
-/* Styling email input field based on its type - Attribute selectors*/
-.subform-container input[type='email']:focus{
+/* removing default box shadows from input fields based on its type - Attribute selectors and focus psuedo class*/
+.subform-container input:focus, .subform-container textarea:focus{
     background-color: #000;
     box-shadow: none;
     outline: none;
 }
 
-/* Styling submit button based on its type - Attribute selectors*/
+/* validity psuedo class to style invalid input fields */
+.subform-container input:focus:invalid, .subform-container textarea:focus:invalid{
+    border: 1px solid rgba(255, 0, 0, 0.5);
+}
+
+/* Styling submit button based on its type with Attribute selectors*/
 .subform-container input[type='submit']{
     background-color: #08fdd8;
     padding: 10px 20px;
@@ -577,11 +585,12 @@ section{
     transition: all 0.1s ease;
 }
 
-/* Styling submit button based on its type - Attribute selectors*/
+/* Styling submit button based on its type with Attribute selectors*/
 .subform-container input[type='submit']:hover{
     opacity: 0.9;
 }
 
+/* Footer */
 footer{
     margin: 1rem 3rem;
     font-size: 0.5rem;
@@ -605,6 +614,7 @@ footer{
     margin-bottom: 10px;
 }
 
+/* Styling h2 elements inside the about section that doesnt have a class about_heading with negation psuedo class */
 #about .about-section h2:not(.about_heading){
     font-size: 2.5rem;
     letter-spacing: -2px;
@@ -616,7 +626,7 @@ footer{
 #about a:hover{
     color: #08fdd8;
 }
-
+    
 #about .about-section{
     height: fit-content;
     margin-top: 7rem;
@@ -721,6 +731,7 @@ footer{
         margin-top: 6rem;
         margin-bottom: 2rem;
     }
+
 
     .subform-container {
         flex-direction: column;
