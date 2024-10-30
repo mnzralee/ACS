@@ -674,6 +674,11 @@ footer{
 
 }
 
+.contact-section{
+    background-color: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0.5) 100%) I !important;
+
+}
+
 /* Tablet screens, generally between 600px and 1024px */
 @media (min-width: 600px) and (max-width: 1024px) {
 
